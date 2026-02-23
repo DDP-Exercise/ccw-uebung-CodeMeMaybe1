@@ -1,0 +1,181 @@
+/*
+primary (dark) lila: #1A1A1D / rgb(26, 26, 29)
+secondary lila: #3B1C32 /  rgb(59, 28, 50)
+third lila: #6A1E55 / rgb(106, 30, 85)
+light: #A64D79 / rgb(166, 77, 121)
+ */
+:root {
+    --primary-color: #1A1A1D;
+    --secondary-color: #3B1C32;
+    --tertiary-color: #6A1E55;
+    --quaternary-color: #A64D79;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    font-family: "TASA Explorer", sans-serif;
+}
+
+h1 {
+    font-family: "Delius", cursive;
+    background-color: rgba(26, 26, 29, 0.47);
+    padding: 1.8em;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Delius", cursive;
+    text-align: left;
+}
+
+/* NAVIGATION */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: var(--quaternary-color);
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    font-size: 1.8rem;
+}
+
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 15px 5px;
+    box-shadow: 2px 2px 4px var(--quaternary-color);
+}
+
+/* Header */
+header {
+    min-height: calc(100vh - 124px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1762767527282-76e8a5d326e2?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* nur die Artikel im main Bereich */
+main > article {
+    min-height: 100vh;
+    border-bottom: 1px solid var(--quaternary-color);
+}
+
+/* Flex layout für Projekte */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card { /* Boxen bei Projekte */
+    flex: 1 1 280px;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 14px; /*die Abrundung für den lila Rahmen */
+    overflow: hidden;
+    box-shadow: 0px 5px 10px var(--quaternary-color); /* leichter schatten bei Box */
+}
+
+/* Bilder in Projektkarten */
+.card .media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Footer = Information, Adresse, Kontakt*/
+.footer {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    text-align: left;
+    padding: 1em;
+    margin-top: 100px;
+    width: 100%;
+}
+
+/* Links im Footer */
+.footer-link {
+    color: var(--quaternary-color);
+    text-decoration: none;
+}
+
+.footer-link:visited {
+    color: var(--quaternary-color);
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Zurück mit Link zum Home, Projekte oder Über mich */
+.home-big {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Delius", cursive;
+}
+
+/* über mich – Layout & Styling */
+
+.about-section {
+    padding: 2em;
+    text-align: center;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+/* Rundes Bild bei Über mich */
+.about-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border: 5px solid #fff;
+}
+
+/* Text neben dem Bild */
+.about-text {
+    max-width: 500px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+.about-gallery {
+    margin-top: 5em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
